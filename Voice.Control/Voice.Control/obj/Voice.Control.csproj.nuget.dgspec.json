@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rmmat\\source\\repos\\Voice.Control\\Voice.Control\\Voice.Control.csproj": {}
+    "D:\\MyRepos\\RICHIE-DA-CODER\\Voice.Control\\Voice.Control\\Voice.Control.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rmmat\\source\\repos\\Voice.Control\\Voice.Control\\Voice.Control.csproj": {
+    "D:\\MyRepos\\RICHIE-DA-CODER\\Voice.Control\\Voice.Control\\Voice.Control.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rmmat\\source\\repos\\Voice.Control\\Voice.Control\\Voice.Control.csproj",
+        "projectUniqueName": "D:\\MyRepos\\RICHIE-DA-CODER\\Voice.Control\\Voice.Control\\Voice.Control.csproj",
         "projectName": "Voice.Control",
-        "projectPath": "C:\\Users\\rmmat\\source\\repos\\Voice.Control\\Voice.Control\\Voice.Control.csproj",
+        "projectPath": "D:\\MyRepos\\RICHIE-DA-CODER\\Voice.Control\\Voice.Control\\Voice.Control.csproj",
         "packagesPath": "C:\\Users\\rmmat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rmmat\\source\\repos\\Voice.Control\\Voice.Control\\obj\\",
+        "outputPath": "D:\\MyRepos\\RICHIE-DA-CODER\\Voice.Control\\Voice.Control\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -26,8 +26,8 @@
           "monoandroid90"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://ci.appveyor.com/nuget/ipay": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "monoandroid90": {
@@ -38,6 +38,10 @@
       "frameworks": {
         "monoandroid90": {
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
             "Xamarin.Android.Support.Core.Utils": {
               "target": "Package",
               "version": "[28.0.0.3, )"
@@ -50,9 +54,9 @@
               "target": "Package",
               "version": "[28.0.0.3, )"
             },
-            "Xamarin.Essentials": {
+            "Xamarin.Android.Support.v7.AppCompat": {
               "target": "Package",
-              "version": "[1.3.1, )"
+              "version": "[28.0.0.3, )"
             }
           }
         }

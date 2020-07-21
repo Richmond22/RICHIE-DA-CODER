@@ -1,0 +1,22 @@
+version: "3"
+services:
+
+  # Container 2 
+  site:   
+    image: wordpress    
+    restart: always   
+    volumes: ["../src/:/var/www/html/"]   
+    environment:
+      DB_HOST: host.docker.internal:3306
+      DB_USER: root
+      DB_PASSWORD: P@ssword    
+      DB_NAME: sitedb
+    ports:
+      - 80:80     
+    networks:
+      - wp      
+networks:
+  wp:
+  
+volumes:
+  db_data:

@@ -8,9 +8,11 @@ using Android.Runtime;
 using Android.Speech;
 using Android.Support.Design.Widget;
 using Android.Support.V7.App;
+using Android;
 using Android.Views;
 using Android.Widget;
 using Java.Util;
+using Org.Json;
 using AlertDialog = Android.App.AlertDialog;
 
 namespace Voice.Control
@@ -29,14 +31,13 @@ namespace Voice.Control
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
             textBox = FindViewById<TextView>(Resource.Id.search_voice_btn);
-
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
             var adapter = BluetoothAdapter.DefaultAdapter;
             var device = adapter.BondedDevices.FirstOrDefault(x => x.Name == "Richmond’s iPhone");
 
-            var _socket = device.CreateRfcommSocketToServiceRecord(UUID.FromString("00001101-0000-1000-8000-00805f9b34fb"));
+           var _socket = device.CreateRfcommSocketToServiceRecord(UUID.FromString("00001101-0000-1000-8000-00805f9b34fb"));
             var t = _socket.ConnectAsync();
             t.GetAwaiter().GetResult();
             var s = t.Status;

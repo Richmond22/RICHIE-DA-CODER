@@ -1,0 +1,33 @@
+﻿
+syntax = "proto3";
+
+option csharp_namespace = "GrpcServiceDemo";
+
+package GrpcDemo;
+
+// The greeting service definition.
+service Student {
+	// Sends a greeting
+	rpc getStudent (.GrpcDemo.StudentRequest) returns (.GrpcDemo.StudentResponse);
+	rpc getStudentGrades (.GrpcDemo.StudentRequest) returns (.GrpcDemo.StudentGrades);
+	rpc getStudentsAsync (.GrpcDemo.Empty) returns (stream .GrpcDemo.StudentResponse);
+}
+
+message Empty{}
+
+message StudentRequest{
+	int32 Id = 1;
+}
+message StudentResponse {
+	int32 Id = 1;
+	string name = 2;
+	string surname = 3;
+	int32 age = 4;
+}
+
+// The response message containing the greetings.
+message StudentGrades {
+	int32 studentId = 1;
+	string subject = 2;
+	double grades = 3;
+}
